@@ -35,7 +35,7 @@ func CreateAccount(w http.ResponseWriter, r *http.Request) {
 		InitialBalance: fmt.Sprintf("%.5f", acc.Balance),
 	}
 
-	w.Header().Set("Content-Type", "application/json") // ✅ Add this
+	w.Header().Set("Content-Type", "application/json") 
 	w.WriteHeader(http.StatusCreated)
 	json.NewEncoder(w).Encode(resp)
 }
